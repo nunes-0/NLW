@@ -1,0 +1,152 @@
+  @charset "UTF-8" ;
+
+  /*  o root tem poder maior de forçar e fazer com que mais elementos dentro do corpo estejam com essa font e cor       */
+  * , :root{ 
+    font-family: "Inter";
+    color: white;
+    line-height: 160%; /* espaçamento entre as linhas   */
+  }
+
+
+
+body {
+   
+     background-image: url('./assets/bg.jpg');
+     background-repeat: no-repeat;
+     background-position: top center;
+     background-size: cover; 
+     background-color: #121214;  
+   
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ margin: 50px;
+
+}
+ header img {
+  width: 300px;
+  
+ }
+  section {
+    background-image: linear-gradient(90deg, #9572FC 0% , #43E7AD 50% , #E2D45C 100%);
+    border-radius: 0.625rem;
+    padding-top: 4px;
+  }
+  section div {
+    padding: 2rem;
+    padding-top: 1.5rem;
+    border-radius: 8px;
+    background-color: #2A2634;
+  }
+  h2 {
+     letter-spacing: -0.47px;
+     margin-bottom: 2px;   /*melhora o espaço entre o h2 e o p */
+    
+  }
+   p {
+    letter-spacing: -0.18px;  /* junta mais espaçamento das letras  */
+    color: #A1A1AA;
+    font-size: 14px;
+   
+   }  
+       /* animações */
+       main section {
+        opacity: 1;
+       transform: translateY(2rem);
+
+        animation-name: aparecer;
+        animation-duration: 0.7s;
+        animation-fill-mode: forwards;
+      
+       }
+
+   @keyframes aparecer {
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+   }  
+   form {
+    display: flex;  /* as caixas de input ficam um do lado da outra   */
+    flex-direction: row;
+    flex-wrap: wrap;   /* elas quebram para baixo quando sem espaço  */
+    gap: 0.85rem;  /* espaço entre os elementos  */
+    margin: 1.25rem 0;
+   }  
+
+   input, select , button {
+    all: unset    /* tira toda a predefinição dos inputs do navegador */
+   } 
+
+     select {
+    appearance: none;         /* remove a setinha padrão */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #00000066; /* mesmo fundo do input */
+    padding: 7px;
+    font-size: 0.875rem;
+    border: 2px solid #9147ff;
+    border-radius: 0.5rem;
+}
+  
+   input , select {
+    border: 2px solid #9147ff;
+    border-radius: 0.5rem;
+    padding: 7px;
+    font-size: 0.875rem;
+    background-color: #00000066;
+   }  
+    input {
+      flex: 1;   /* Expande o input para ocupar o máximo de espaço livre no container*/
+    }
+   button {
+    border: 2px solid #9147ff;
+    color: white;
+    background-color: #12121480;
+    padding: 7px;
+    border-radius: 10px;
+    margin: 10px;
+   }   
+   button:hover {
+
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2);
+
+   }
+   button:disabled {
+    transition: initial;   /* initial significa antes de predefinismos o estilo */ 
+    transform: initial;
+    box-shadow: initial;
+    cursor: not-allowed;
+
+   }  
+    button.loading {
+     animation: pulse 1s infinite;
+    }
+      @keyframes pulse {
+        50% {
+          opacity: 0.5;
+        }
+      }
+
+      div#res {
+        background: rgba(0, 0, 0, 0.4); 
+        border-radius: 0.5rem;
+        padding: 1.25rem;
+        border-left: 4px solid #43E7AD;
+        
+      }
+      div#res p {
+        color: white;
+      }
+        div#res ul {
+          pad: 1.5rem;
+          opacity: 0.8;
+
+        }
+        .hidden {
+          display: none;
+        }

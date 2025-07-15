@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="C:\Users\usuario\OneDrive\Documentos\estudos\NLW\assets\logo.png" type="image/x-icon">
+    
+</head>
+<body>
+    <header>
+        <img src="C:\Users\usuario\OneDrive\Documentos\estudos\NLW\assets\logo.png" alt="logo NGLesports">
+    </header>
+
+    <main>
+        <section>
+
+            <div class="title">
+                <h2>Assistente do Meta</h2>
+                <p>Pergunte sobre estratégias,buids e dicas sobre os seus jogos..</p>
+
+
+                <form action="">
+
+                <input type="password" name="api" id="chave" placeholder="Informe a API KEY do Gemini" required>
+
+                <select required id="gameselect">
+                    <option value="">Selecione um jogo</option>
+                    <option value="Valorant">Valorant</option>
+                    <option value="lol">League of Legends</option>
+                    <option value="csgo">CS:GO</option>
+                    <option value="stfc">satisfactory</option>
+                    <option value="brws">Braw stars </option>
+                    <option value="Clash">Clash Royale</option>
+                    <option value="eldrg">Elden Ring</option>
+                    
+                </select>
+                    <input type="text" placeholder="EX: Melhor buid para ADC ..." required id="questao">
+
+        
+                </form>  
+
+                 <button id="bperguntar" onclick="perguntar(event)">
+                perguntar
+                </button>
+
+                <div id="res" class="hidden">
+                  
+                </div>
+            </div>
+
+        </section>
+    </main>
+     
+    <script src="script.js"></script>
+</body>
+</html>
