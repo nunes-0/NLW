@@ -4,7 +4,7 @@ let perg = document.getElementById('questao');
 let btt = document.getElementById('bperguntar');
 let res = document.getElementById('res');
 
-//  AIzaSyCyuJgRy60NT_ukruwfF6aclsyEOdGuyUA
+//  
 // Corrigido: definição de função faltava parênteses
 function converter(text) {
   res.innerHTML = text;
